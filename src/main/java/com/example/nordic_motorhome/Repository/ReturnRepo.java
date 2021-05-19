@@ -1,4 +1,4 @@
 package com.example.nordic_motorhome.Repository;
 
-public class RentalExpensesRepo {
+public class ReturnRepo {
 }
