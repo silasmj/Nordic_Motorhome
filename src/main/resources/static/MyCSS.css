@@ -18,3 +18,9 @@ li a, .dropbtn {
 li a:hover, .dropdown:hover .dropbtn {
     background-color: #F58F29;
 }
+#Header {
+    color: wheat;
+    text-align: left;
+    float: left;
+    padding-left: 10px;
+}

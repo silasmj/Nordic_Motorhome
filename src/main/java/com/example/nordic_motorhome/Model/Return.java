@@ -11,7 +11,7 @@ public class Return extends Rental{
 
     public Return(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, int km_start, String season, String pick_up_extra, int rental_id1, String rental_end, String drop_off, int drop_off_extras, int kmEnd, int repair_fee, float fuel_level) {
         super(rental_id, customer_id, motorhome_id, rental_start, bike_rack, bed_linen, chairs, picnic_table, child_seat, pick_up, km_start, season, pick_up_extra);
-        this.rental_id = rental_id1;
+        this.rental_id = rental_id;
         this.rental_end = rental_end;
         this.drop_off = drop_off;
         this.drop_off_extras = drop_off_extras;
