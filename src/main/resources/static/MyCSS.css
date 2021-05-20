@@ -18,9 +18,39 @@ li a, .dropbtn {
 li a:hover, .dropdown:hover .dropbtn {
     background-color: #F58F29;
 }
-#Header {
-    color: wheat;
-    text-align: left;
-    float: left;
-    padding-left: 10px;
+
+.image {
+
+    image-rendering: smooth;
+    height: 100%;
+    width: 100%;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 0.85;
+
+}
+input[type=text] {
+    width: 20%;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+    width: 100%;
+    border: #EEF5DB;
+}
+.container {
+    position: relative;
+}
+.box {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    background-color: rgba(0, 255, 0, 0.2);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+.text {
+    color: blue;
 }
