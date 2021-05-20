@@ -14,6 +14,10 @@ import java.util.List;
 
 @Controller
 public class HomeController {
+    @Autowired
+    CustomerService customerService;
+    RentalService rentalService;
+
     @GetMapping("/")
     public String index() {
         return "home/index";

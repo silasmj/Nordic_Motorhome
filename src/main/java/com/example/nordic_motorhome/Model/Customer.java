@@ -5,23 +5,27 @@ public class Customer {
     String first_name;
     String last_name;
     String email;
-    int phoneNumber;
+    int phone_number;
     String address;
     int zip_code;
     String city;
-    int driverLicenseNum;
+    int driver_license_number;
 
 
-    public Customer(int customer_id, String first_name, String last_name, String email, int phoneNumber, String address, int zip_code, String city, int driverLicenseNum) {
+    public Customer(int customer_id, String first_name, String last_name, String email, int phone_number, String address, int zip_code, String city, int driver_license_number) {
         this.customer_id = customer_id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
-        this.phoneNumber = phoneNumber;
+        this.phone_number = phone_number;
         this.address = address;
         this.zip_code = zip_code;
         this.city = city;
-        this.driverLicenseNum = driverLicenseNum;
+        this.driver_license_number = driver_license_number;
+    }
+
+    public Customer(){
+
     }
 
     public int getCustomer_id() {
@@ -56,12 +60,12 @@ public class Customer {
         this.email = email;
     }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
+    public int getPhone_number() {
+        return phone_number;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone_number(int phone_number) {
+        this.phone_number = phone_number;
     }
 
     public String getAddress() {
@@ -88,11 +92,11 @@ public class Customer {
         this.city = city;
     }
 
-    public int getDriverLicenseNum() {
-        return driverLicenseNum;
+    public int getDriver_license_number() {
+        return driver_license_number;
     }
 
-    public void setDriverLicenseNum(int driverLicenseNum) {
-        this.driverLicenseNum = driverLicenseNum;
+    public void setDriver_license_number(int driver_license_number) {
+        this.driver_license_number = driver_license_number;
     }
 }
