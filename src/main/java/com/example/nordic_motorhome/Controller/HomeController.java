@@ -23,4 +23,17 @@ public class HomeController {
         return "home/index";
     }
 
+    @GetMapping ("/rental")
+    public String Rental(Model model) {
+        List<Rental> rentalList = rentalService.showRental();
+        model.addAttribute("rental", rentalList);
+        return "home/rental";
+    }
+
+    @GetMapping("/customer")
+    public String customer(Model model){
+        List<Customer> customerList = customerService.showCustomer();
+        model.addAttribute("customer", customerList);
+        return "home/customer";
+    }
 }

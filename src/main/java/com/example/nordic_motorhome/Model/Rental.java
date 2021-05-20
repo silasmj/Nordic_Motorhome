@@ -1,36 +1,42 @@
 package com.example.nordic_motorhome.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Rental {
+    @Id
     int rental_id;
     int customer_id;
     int motorhome_id;
-    String rentalStart;
-    String rentalEnd;
-    int bikeRack;
-    int bedLinen;
+    String rental_start;
+    int bike_rack;
+    int bed_linen;
     int chairs;
-    int picnicTable;
-    int childSeat;
-    String pickup;
-    String dropoff;
-    int kmStart;
+    int picnic_table;
+    int child_seat;
+    String pick_up;
+    int km_start;
     String season;
+    String pick_up_extra;
 
-    public Rental(int rental_id, int customer_id, int motorhome_id, String rentalStart, String rentalEnd, int bikeRack, int bedLinen, int chairs, int picnicTable, int childSeat, String pickup, String dropoff, int kmStart, String season) {
+    public Rental(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, int km_start, String season, String pick_up_extra) {
         this.rental_id = rental_id;
         this.customer_id = customer_id;
         this.motorhome_id = motorhome_id;
-        this.rentalStart = rentalStart;
-        this.rentalEnd = rentalEnd;
-        this.bikeRack = bikeRack;
-        this.bedLinen = bedLinen;
+        this.rental_start = rental_start;
+        this.bike_rack = bike_rack;
+        this.bed_linen = bed_linen;
         this.chairs = chairs;
-        this.picnicTable = picnicTable;
-        this.childSeat = childSeat;
-        this.pickup = pickup;
-        this.dropoff = dropoff;
-        this.kmStart = kmStart;
+        this.picnic_table = picnic_table;
+        this.child_seat = child_seat;
+        this.pick_up = pick_up;
+        this.km_start = km_start;
         this.season = season;
+        this.pick_up_extra = pick_up_extra;
+    }
+    public Rental (){
+
     }
 
     public int getRental_id() {
@@ -57,36 +63,28 @@ public class Rental {
         this.motorhome_id = motorhome_id;
     }
 
-    public String getRentalStart() {
-        return rentalStart;
+    public String getRental_start() {
+        return rental_start;
     }
 
-    public void setRentalStart(String rentalStart) {
-        this.rentalStart = rentalStart;
+    public void setRental_start(String rental_start) {
+        this.rental_start = rental_start;
     }
 
-    public String getRentalEnd() {
-        return rentalEnd;
+    public int getBike_rack() {
+        return bike_rack;
     }
 
-    public void setRentalEnd(String rentalEnd) {
-        this.rentalEnd = rentalEnd;
+    public void setBike_rack(int bike_rack) {
+        this.bike_rack = bike_rack;
     }
 
-    public int getBikeRack() {
-        return bikeRack;
+    public int getBed_linen() {
+        return bed_linen;
     }
 
-    public void setBikeRack(int bikeRack) {
-        this.bikeRack = bikeRack;
-    }
-
-    public int getBedLinen() {
-        return bedLinen;
-    }
-
-    public void setBedLinen(int bedLinen) {
-        this.bedLinen = bedLinen;
+    public void setBed_linen(int bed_linen) {
+        this.bed_linen = bed_linen;
     }
 
     public int getChairs() {
@@ -97,45 +95,38 @@ public class Rental {
         this.chairs = chairs;
     }
 
-    public int getPicnicTable() {
-        return picnicTable;
+    public int getPicnic_table() {
+        return picnic_table;
     }
 
-    public void setPicnicTable(int picnicTable) {
-        this.picnicTable = picnicTable;
+    public void setPicnic_table(int picnic_table) {
+        this.picnic_table = picnic_table;
     }
 
-    public int getChildSeat() {
-        return childSeat;
+    public int getChild_seat() {
+        return child_seat;
     }
 
-    public void setChildSeat(int childSeat) {
-        this.childSeat = childSeat;
+    public void setChild_seat(int child_seat) {
+        this.child_seat = child_seat;
     }
 
-    public String getPickup() {
-        return pickup;
+    public String getPick_up() {
+        return pick_up;
     }
 
-    public void setPickup(String pickup) {
-        this.pickup = pickup;
+    public void setPick_up(String pick_up) {
+        this.pick_up = pick_up;
     }
 
-    public String getDropoff() {
-        return dropoff;
+    public int getKm_start() {
+        return km_start;
     }
 
-    public void setDropoff(String dropoff) {
-        this.dropoff = dropoff;
+    public void setKm_start(int km_start) {
+        this.km_start = km_start;
     }
 
-    public int getKmStart() {
-        return kmStart;
-    }
-
-    public void setKmStart(int kmStart) {
-        this.kmStart = kmStart;
-    }
     public String getSeason() {
         return season;
     }
@@ -144,4 +135,11 @@ public class Rental {
         this.season = season;
     }
 
+    public String getPick_up_extra() {
+        return pick_up_extra;
+    }
+
+    public void setPick_up_extra(String pick_up_extra) {
+        this.pick_up_extra = pick_up_extra;
+    }
 }
