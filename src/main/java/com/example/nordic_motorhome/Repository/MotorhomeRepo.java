@@ -16,7 +16,7 @@ public class MotorhomeRepo {
     JdbcTemplate template;
 
     public List<Motorhome> showMotorhome() {
-        String sql = "SELECT * FROM motorhome";
+        String sql = "SELECT * FROM motorhome;";
         RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
         return template.query(sql, rowMapper);
     }

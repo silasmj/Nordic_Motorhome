@@ -3,6 +3,7 @@ package com.example.nordic_motorhome.Controller;
 import com.example.nordic_motorhome.Model.Customer;
 import com.example.nordic_motorhome.Model.Motorhome;
 import com.example.nordic_motorhome.Model.Rental;
+import com.example.nordic_motorhome.Repository.MotorhomeRepo;
 import com.example.nordic_motorhome.Repository.RentalRepo;
 import com.example.nordic_motorhome.Service.CustomerService;
 import com.example.nordic_motorhome.Service.MotorhomeService;
@@ -21,7 +22,9 @@ import java.util.List;
 public class HomeController {
     @Autowired
     CustomerService customerService;
+    @Autowired
     RentalService rentalService;
+    @Autowired
     MotorhomeService motorhomeService;
 
     @GetMapping("/")
