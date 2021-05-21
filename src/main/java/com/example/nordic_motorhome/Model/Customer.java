@@ -1,15 +1,18 @@
 package com.example.nordic_motorhome.Model;
 
+import javax.persistence.Id;
+
 public class Customer {
-    int customer_id;
-    String first_name;
-    String last_name;
-    String email;
-    int phone_number;
-    String address;
-    int zip_code;
-    String city;
-    int driver_license_number;
+    @Id
+    private int customer_id;
+    private String first_name;
+    private String last_name;
+    private String email;
+    private int phone_number;
+    private String address;
+    private int zip_code;
+    private String city;
+    private int driver_license_number;
 
 
     public Customer(int customer_id, String first_name, String last_name, String email, int phone_number, String address, int zip_code, String city, int driver_license_number) {

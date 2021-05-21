@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Nordic Motorhome</title>
-    <link rel="stylesheet" type="text/css" href="MyCss.css">
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
 </head>
 <body>
 <ul>
@@ -13,17 +13,27 @@
     <li><a class="dtopbtn" href="#">Rentals</a></li>
 
 </ul>
-<h1>Welcome to Nordic motorhome</h1>
+<h1 class="customerHeader">Customer page</h1>
+<p class="customerParagraph">Here you can see a list of customers</p>
+<div style="margin: 0">
+    <a href="/createCustomer" class="styled-table">
+        <button>Create new customer</button>
+    </a>
+</div>
+
 
 <table class="styled-table">
     <thead>
     <tr>
-        <th>customer_id</th>
-        <th>first_name</th>
-        <th>last_name</th>
-        <th>phone_number</th>
-        <th>email</th>
-        <th>driver_license_number</th>
+        <th>Customer id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Driver license number</th>
+        <th>Address</th>
+        <th>Zip code</th>
+        <th>Different actions</th>
     </tr>
     </thead>
     <tbody>
@@ -34,6 +44,16 @@
         <td th:text="${customer.phone_number}"></td>
         <td th:text="${customer.email}"></td>
         <td th:text="${customer.driver_license_number}"></td>
+        <td th:text="${customer.address}"></td>
+        <td th:text="${customer.zip_code}"></td>
+        <td>
+            <a th:href="@{'/deleteCustomer/'+${customer.customer_id}}">
+                <button>Delete customer</button>
+            </a>
+            <a th:href="@{'/updateCustomer/'+${customer.customer_id}}">
+                <button>Edit customer</button>
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
