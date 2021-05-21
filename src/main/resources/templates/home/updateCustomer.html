@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Nordic Motorhome</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+<ul>
+    <p id="Header">Nordic Motorhome</p>
+    <li><a class="dtopbtn" href="#">Motorhomes</a></li>
+    <li><a class="dtopbtn" href="/customer">Customers</a></li>
+    <li><a class="dtopbtn" href="#">Rentals</a></li>
+</ul>
+
+<h1 class="customerHeader">Edit a customer</h1>
+<div class="wrapperCreateCustomer">
+    <form action="/updatesCustomer" method="post">
+        <div class="customerParagraph">
+            <input type="text" name="customer_id" th:value="${customer.customer_id}">
+            <input type="text" name="first_name" th:value="${customer.first_name}">
+            <input type="text" name="last_name" th:value="${customer.last_name}">
+            <input type="text" name="phone_number" th:value="${customer.phone_number}">
+            <input type="text" name="email" th:value="${customer.email}">
+            <input type="text" name="driver_license_number" th:value="${customer.driver_license_number}">
+            <input type="text" name="address" th:value="${customer.address}">
+            <input type="text" name="zip_code" th:value="${customer.zip_code}">
+            <div class="createCustomer">
+                <button type="submit" value="Save changes">Save changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

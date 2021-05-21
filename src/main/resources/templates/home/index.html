@@ -7,19 +7,86 @@
 </head>
 <body>
 <ul>
-        <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold" >Welcome to Nordic Motorhome</p>
-        <li><a class="dtopbtn" href="#">Motorhomes</a></li>
-        <li><a class="dtopbtn" href="#">Customers</a></li>
+        <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold">Welcome to Nordic Motorhome</p>
+        <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
+        <li><a class="dtopbtn" href="/customer">Customers</a></li>
         <li><a class="dtopbtn" href="#">Rentals</a></li>
 </ul>
 
 <div class="container">
-    <img class="image" src="img/1920.jpg">
+    <img class="image" src="img/orange.jpg">
     <div class="box">
+        <h1 style="font-family: Broadway sans-serif">Create Rental</h1>
+        <div class="wrapperCreateRental">
         <div class="text">
-            <h4>Hejssaaa</h4>
+            <form>
+                <label for="customer_id">Enter Customer ID</label>
+                <input type="text" id="customer_id" placeholder="Customer ID">
+                <br>
+                <br>
+                <label for="motorhome_id">Enter Motorhome ID</label>
+                <input type="text" id="motorhome_id" placeholder="Motorhome ID">
+                <br>
+                <br>
+                <label for="rental_start">Enter the date of the Rental Start</label>
+                <input style="width: 170px" type="date" id="rental_start" placeholder="Rental Start">
+                <br>
+                <br>
+                <label for="bike_rack">Enter the amount of Bike Rack(s)</label>
+                <input type="text" id="bike_rack" placeholder="Bike Rack(s)">
+                <br>
+                <br>
+                <label for="bed_linen">Enter the amount of Bed Linen</label>
+                <input type="text" id="bed_linen" placeholder="Bed Linen">
+                <br>
+                <br>
+                <label for="chairs">Enter the amount of Chair(s)</label>
+                <input type="text" id="chairs" placeholder="Chair(s)">
+                <br>
+                <br>
+                <label for="picnic_table">Enter the amount of picnic table(s)</label>
+                <input type="text" id="picnic_table" placeholder="Picnic table(s)">
+                <br>
+                <br>
+                <label for="child_seat">Enter the amount of child seat(s)</label>
+                <input type="text" id="child_seat" placeholder="Child Seat(s)">
+                <br>
+                <br>
+                <label for="pick_up">Enter the place for pick up</label>
+                <input type="text" id="pick_up" placeholder="Pick up">
+                <br>
+                <br>
+                <label for="pick_up_extra">Enter the price in $ - (1 km = 0,7$)</label>
+                <input type="text" id="pick_up_extra" placeholder="Extras for Pick up">
+                <br>
+                <br>
+                <label for="km_start">Enter the amount of KM at start</label>
+                <input type="text" id="km_start" placeholder="KM at start">
+                <br>
+                <br>
+                <fieldset>
+                <legend style="font-weight: bold">Choose the season</legend>
+                <br>
+                <input type="radio" id="peak" name="season" value="season">
+                <label for="peak">Peak-season</label>
+                <input type="radio" id="middle" name="season" value="season">
+                <label for="middle">Middle-season</label>
+                <input type="radio" id="low" name="season" value="season">
+                <label for="low">Low-Season</label>
+                </fieldset>
+                <br>
+                <label for="rental_end">Enter the date of the Rental End</label>
+                <input style="width: 170px" type="date" id="rental_end" placeholder="Rental End">
+                <br>
+                <br>
+                <label for="drop_off">Enter the place for drop off</label>
+                <input type="text" id="drop_off" placeholder="Drop off">
+                <br>
+                <br>
+                <input type="submit" value="Save Rental">
+            </form>
         </div>
-
+    </div>
     </div>
 </div>
 </body>

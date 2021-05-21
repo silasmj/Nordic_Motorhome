@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorhome</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+
+</head>
+<body>
+<ul>
+
+    <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
+    <li><a class="dtopbtn" href="#">Customers</a></li>
+    <li><a class="dtopbtn" href="/rental">Rentals</a></li>
+
+</ul>
+<a href="/createMotorhome">
+
+    <button class="styled-table">Create new Motorhome</button>
+</a>
+
+<h1>Welcome to nordic motorhome</h1>
+<table class="styled-table">
+    <thead>
+    <th>Motorhome ID</th>
+    <th>Brand</th>
+    <th>model</th>
+    <th>type</th>
+
+    </thead>
+    <tbody>
+    <tr th:each="motorhome: ${motorhome}">
+        <td th:text="${motorhome.motorhome_id}"></td>
+        <td th:text="${motorhome.brand}"></td>
+        <td th:text="${motorhome.model}"></td>
+        <td th:text="${motorhome.type}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

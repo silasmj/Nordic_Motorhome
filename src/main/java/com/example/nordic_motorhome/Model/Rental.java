@@ -16,11 +16,12 @@ public class Rental {
     int picnic_table;
     int child_seat;
     String pick_up;
+    String pick_up_extra;
     int km_start;
     String season;
-    String pick_up_extra;
 
-    public Rental(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, int km_start, String season, String pick_up_extra) {
+
+    public Rental(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, String pick_up_extra, int km_start, String season) {
         this.rental_id = rental_id;
         this.customer_id = customer_id;
         this.motorhome_id = motorhome_id;
@@ -31,10 +32,11 @@ public class Rental {
         this.picnic_table = picnic_table;
         this.child_seat = child_seat;
         this.pick_up = pick_up;
+        this.pick_up_extra = pick_up_extra;
         this.km_start = km_start;
         this.season = season;
-        this.pick_up_extra = pick_up_extra;
     }
+
     public Rental (){
 
     }

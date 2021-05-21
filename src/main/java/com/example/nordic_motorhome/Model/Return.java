@@ -8,9 +8,10 @@ public class Return extends Rental{
     int kmEnd;
     int repair_fee;
     float fuel_level;
+    int full_price;
 
-    public Return(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, int km_start, String season, String pick_up_extra, int rental_id1, String rental_end, String drop_off, int drop_off_extras, int kmEnd, int repair_fee, float fuel_level) {
-        super(rental_id, customer_id, motorhome_id, rental_start, bike_rack, bed_linen, chairs, picnic_table, child_seat, pick_up, km_start, season, pick_up_extra);
+    public Return(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, String pick_up_extra, int km_start, String season, int rental_id1, String rental_end, String drop_off, int drop_off_extras, int kmEnd, int repair_fee, float fuel_level, int full_price) {
+        super(rental_id, customer_id, motorhome_id, rental_start, bike_rack, bed_linen, chairs, picnic_table, child_seat, pick_up, pick_up_extra, km_start, season);
         this.rental_id = rental_id;
         this.rental_end = rental_end;
         this.drop_off = drop_off;
@@ -18,6 +19,13 @@ public class Return extends Rental{
         this.kmEnd = kmEnd;
         this.repair_fee = repair_fee;
         this.fuel_level = fuel_level;
+        this.full_price = full_price;
+    }
+    public Return(int rental_id, int customer_id, int motorhome_id, String rental_start, int bike_rack, int bed_linen, int chairs, int picnic_table, int child_seat, String pick_up, String pick_up_extra, int km_start, String season,  String rental_end, String drop_off) {
+        super(rental_id, customer_id, motorhome_id, rental_start, bike_rack, bed_linen, chairs, picnic_table, child_seat, pick_up, pick_up_extra, km_start, season);
+        this.rental_end = rental_end;
+        this.drop_off = drop_off;
+
     }
 
     public int getRental_id() {
@@ -74,5 +82,13 @@ public class Return extends Rental{
 
     public void setFuel_level(float fuel_level) {
         this.fuel_level = fuel_level;
+    }
+
+    public int getFull_price() {
+        return full_price;
+    }
+
+    public void setFull_price(int full_price) {
+        this.full_price = full_price;
     }
 }
