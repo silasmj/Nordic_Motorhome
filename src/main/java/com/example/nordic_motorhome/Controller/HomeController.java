@@ -5,6 +5,7 @@ import com.example.nordic_motorhome.Model.Motorhome;
 import com.example.nordic_motorhome.Model.Rental;
 import com.example.nordic_motorhome.Repository.RentalRepo;
 import com.example.nordic_motorhome.Service.CustomerService;
+import com.example.nordic_motorhome.Service.MotorhomeService;
 import com.example.nordic_motorhome.Service.RentalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,7 @@ public class HomeController {
     @Autowired
     CustomerService customerService;
     RentalService rentalService;
+    MotorhomeService motorhomeService;
 
     @GetMapping("/")
     public String index() {
@@ -33,7 +35,12 @@ public class HomeController {
         model.addAttribute("rental", rentalList);
         return "home/rental";
     }
-
+    @GetMapping("/motorhome")
+    public String motorhome (Model model){
+        List<Motorhome> motorhomeList = motorhomeService.showMotorhome();
+        model.addAttribute("motorhome", motorhomeList);
+        return "home/motorhome";
+    }
     @GetMapping("/customer")
     public String customer(Model model){
         List<Customer> customerList = customerService.showCustomer();

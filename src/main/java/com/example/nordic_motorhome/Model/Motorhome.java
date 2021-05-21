@@ -1,6 +1,11 @@
 package com.example.nordic_motorhome.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Motorhome {
+    @Id
     int motorhome_id;
     String brand;
     String model;
@@ -11,6 +16,9 @@ public class Motorhome {
         this.brand = brand;
         this.model = model;
         this.type = type;
+    }
+    public Motorhome(){
+
     }
 
     public int getMotorhome_id() {
