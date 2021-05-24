@@ -62,6 +62,37 @@ public class HomeController {
         model.addAttribute("motorhome", motorhomeList);
         return "home/motorhome";
     }
+
+    @GetMapping("/createMotorhome")
+    public String createMotorhome(){
+        return "home/createMotorhome";
+    }
+
+    @PostMapping("/createMotorhome")
+    public String createMotorhome(@ModelAttribute Motorhome motorhome){
+        motorhomeService.createMotorhome(motorhome);
+        return "redirect:/motorhome";
+
+    }
+    @GetMapping("/deleteMotorhome/{motorhome_id}")
+    public String deleteMotorhome(@PathVariable("motorhome_id") int motorhome_id){
+        boolean deletedMotorhome = motorhomeService.deleteMotorhome(motorhome_id);
+        if (deletedMotorhome){
+            return "redirect:/motorhome";
+        }else{
+            return "redirect:/motorhome";
+        }
+    }
+    @GetMapping("/updateMotorhome/{motorhome_id}")
+    public String updateMH(@PathVariable("motorhome_id") int motorhome_id, Model model){
+        model.addAttribute("motorhome", motorhomeService.findMotorhomeById(motorhome_id));
+        return "home/updateMotorhome";
+    }
+    @PostMapping("/updateMotorhome")
+    public String updateMotorhome(@ModelAttribute Motorhome motorhome){
+        motorhomeService.updateMotorhome(motorhome.getMotorhome_id(), motorhome);
+        return "redirect:/motorhome";
+    }
     @GetMapping("/customer")
     public String customer(Model model){
         List<Customer> customerList = customerService.showCustomer();

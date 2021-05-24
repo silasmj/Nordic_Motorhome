@@ -16,4 +16,17 @@ public class MotorhomeService {
     public List<Motorhome> showMotorhome() {
         return motorhomeRepo.showMotorhome();
     }
+    public Motorhome createMotorhome(Motorhome m){
+        return motorhomeRepo.createMotorhome(m);
+    }
+    public Boolean deleteMotorhome(int motorhome_id){
+        return motorhomeRepo.deleteMotorhome(motorhome_id);
+    }
+    public Motorhome updateMotorhome(int motorhome_id, Motorhome m){
+        return motorhomeRepo.updateMotorhome(motorhome_id, m);
+    }
+    public Motorhome findMotorhomeById(int motorhome_id){
+        return motorhomeRepo.findMotorhomeById(motorhome_id);
+    }
+
 }

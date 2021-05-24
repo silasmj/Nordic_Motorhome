@@ -8,25 +8,31 @@
 </head>
 <body>
 <ul>
-
+    <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold"><a href="/">Welcome to Nordic Motorhome</a></p>
     <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
-    <li><a class="dtopbtn" href="#">Customers</a></li>
+    <li><a class="dtopbtn" href="/customer">Customers</a></li>
     <li><a class="dtopbtn" href="/rental">Rentals</a></li>
 
 </ul>
-<a href="/createMotorhome">
+<h1 class="customerHeader">Motorhome page</h1>
+<p class="customerParagraph">Here you can see a list of the different motorhomes</p>
 
-    <button class="styled-table">Create new Motorhome</button>
-</a>
+<div style = "position:relative; left:45.5%; top:2%;">
+    <a href="/createMotorhome" class="styled-table">
+        <button>Create new Motorhome</button>
+    </a>
+</div>
+<br>
 
-<h1>Welcome to nordic motorhome</h1>
 <table class="styled-table">
     <thead>
-    <th>Motorhome ID</th>
-    <th>Brand</th>
-    <th>model</th>
-    <th>type</th>
-
+    <tr>
+        <th>Motorhome ID</th>
+        <th>Brand</th>
+        <th>model</th>
+        <th>type</th>
+        <th>Different actions</th>
+    </tr>
     </thead>
     <tbody>
     <tr th:each="motorhome: ${motorhome}">
@@ -35,6 +41,14 @@
         <td th:text="${motorhome.model}"></td>
         <td th:text="${motorhome.type}"></td>
 
+        <td>
+            <a th:href="@{'/deleteMotorhome/'+${motorhome.motorhome_id}}">
+                <button>Delete Motorhome</button>
+            </a>
+            <a th:href="@{'/updateMotorhome/'+${motorhome.motorhome_id}}">
+                <button>Edit Motorhome</button>
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
