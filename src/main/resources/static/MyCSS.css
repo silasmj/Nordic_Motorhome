@@ -19,10 +19,6 @@ li a:hover, .dropdown:hover .dropbtn {
     background-color: #F58F29;
 }
 
-image .urban {
-    height: 280px;
-    width: auto;
-}
 
 .wrapperCreateRental input[type=text] {
     width: 25%;
@@ -217,5 +213,17 @@ image .urban {
     height: 20px;
     flex: 0 0 200px;
     margin-left: 10px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
