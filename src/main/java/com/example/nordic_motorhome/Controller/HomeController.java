@@ -31,6 +31,11 @@ public class HomeController {
     public String index() {
         return "home/index";
     }
+   /* @PostMapping("/")
+    public String createRentalIndex(@ModelAttribute Rental rental){
+        rentalService.createRental(rental);
+        return "redirect:/customer";
+    } */
 
     @GetMapping ("/rental")
     public String Rental(Model model) {

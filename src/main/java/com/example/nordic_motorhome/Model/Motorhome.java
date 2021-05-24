@@ -9,9 +9,9 @@ public class Motorhome {
     int motorhome_id;
     String brand;
     String model;
-    char type;
+    String type;
 
-    public Motorhome(int motorhome_id, String brand, String model, char type) {
+    public Motorhome(int motorhome_id, String brand, String model, String type) {
         this.motorhome_id = motorhome_id;
         this.brand = brand;
         this.model = model;
@@ -45,11 +45,11 @@ public class Motorhome {
         this.model = model;
     }
 
-    public char getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(char type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

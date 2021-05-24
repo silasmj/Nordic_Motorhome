@@ -19,25 +19,17 @@ li a:hover, .dropdown:hover .dropbtn {
     background-color: #F58F29;
 }
 
-.image {
-
-    image-rendering: smooth;
-    height: 100%;
-    width: 100%;
-    position: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    opacity: 0.85;
-
+image .urban {
+    height: 280px;
+    width: auto;
 }
+
 .wrapperCreateRental input[type=text] {
     width: 25%;
     transition: width 0.4s ease-in-out;
     position: relative;
     display: inline;
     margin : 0 auto;
-
 }
 .wrapperCreateRental input[type=text]:focus {
     border: 3px solid #EEF5DB;

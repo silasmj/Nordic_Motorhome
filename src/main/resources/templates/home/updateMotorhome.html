@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Nordic Motorhome</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+<ul>
+    <p id="Header">Nordic Motorhome</p>
+    <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
+    <li><a class="dtopbtn" href="/customer">Customers</a></li>
+    <li><a class="dtopbtn" href="/rental">Rentals</a></li>
+</ul>
+
+<h1 class="customerHeader">Edit a Motorhome</h1>
+<div class="wrapperCreateCustomer">
+    <form action="/updatesCustomer" method="post">
+        <div class="customerParagraph">
+            <input type="text" name="brand" th:value="${motorhome.brand}">
+            <input type="text" name="model" th:value="${motorhome.model}">
+            <input type="text" name="type" th:value="${motorhome.type}">
+
+            <div class="createMotorhome">
+                <button type="submit" value="Save changes">Save changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
