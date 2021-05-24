@@ -43,6 +43,19 @@ public class HomeController {
         model.addAttribute("rental", rentalList);
         return "home/rental";
     }
+
+    @GetMapping("/createRental")
+    public String createRental(){
+        return "home/createRental";
+    }
+
+    @PostMapping("/createRental")
+    public String createRental(@ModelAttribute Rental rental){
+        rentalService.createRental(rental);
+        return "redirect:/rental";
+    }
+
+
     @GetMapping("/motorhome")
     public String motorhome (Model model){
         List<Motorhome> motorhomeList = motorhomeService.showMotorhome();
