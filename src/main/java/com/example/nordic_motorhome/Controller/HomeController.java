@@ -145,4 +145,9 @@ public class HomeController {
         customerService.updateCustomer(customer.getCustomer_id(), customer);
         return "home/editedCustomer";
     }
+    @PostMapping("/updateRental")
+    public String updateRental(@ModelAttribute Rental rental){
+        rentalService.updateRental(rental.getRental_id(), rental);
+        return "home/editedRental";
+    }
 }

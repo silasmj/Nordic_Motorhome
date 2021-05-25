@@ -7,7 +7,7 @@
 </head>
 <body>
 <ul>
-    <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold"><a href="/" style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold">Welcome to Nordic Motorhome</a></p>
+    <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold"><a href="/">Welcome to Nordic Motorhome</a></p>
     <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
     <li><a class="dtopbtn" href="/customer">Customers</a></li>
     <li><a class="dtopbtn" href="/rental">Rentals</a></li>
@@ -19,43 +19,50 @@
     <form action="/createRental" method="post">
         <div class="customerParagraph">
             <label>
-                Enter Customer Id<input type="text" name="customer_id" placeholder="Enter customer id">
+                Enter Customer Id<input type="text" name="customer_id" placeholder="Enter customer_id">
             </label>
             <label>
                 Enter Motorhome Id<input type="text" name="motorhome_id" placeholder="Enter motorhome id">
             </label>
-            <label for="rental_start">
-                Enter start date<input style="width: 170px" type="date" id="rental_start" placeholder="Rental Start">
+            <label>
+                Enter rental start date<input type="text" name="rental_start_date" placeholder="Enter rental start date">
             </label>
             <label>
-                Enter Bike Rack<input type="text" name="bike_rack" placeholder="Enter bike rack">
+                Enter rental start time<input type="text" name="start_time" placeholder="Enter rental start time">
             </label>
             <label>
-                Enter Bed Linen<input type="text" name="bed_linen" placeholder="Enter bed linen">
+                Enter Bike Rack<input type="text" name="bike_rack" placeholder="Enter bike_rack">
+            </label>
+            <label>
+                Enter Bed Linen<input type="text" name="bed_linen" placeholder="Enter bed_linen">
             </label>
             <label>
                 Enter Chairs<input type="text" name="chairs" placeholder="Enter chairs">
             </label>
             <label>
-                Enter Picnic Table<input type="text" name="picnic_table" placeholder="Enter picnic table">
+                Enter Picnic Table<input type="text" name="picnic_table" placeholder="Enter picnic_table">
             </label>
             <label>
-                Enter Child Seat<input type="text" name="child_seat" placeholder="Enter child seat">
+                Enter Child Seat<input type="text" name="child_seat" placeholder="Enter child_seat">
             </label>
             <label>
-                Enter KM Start<input type="text" name="km_start" placeholder="Enter km start">
+                Enter KM Start<input type="text" name="km_start" placeholder="Enter km_start">
+            </label>
+            <fieldset>
+                <legend style="font-weight: bold">Choose the season</legend>
+                <input type="radio" id="peak" name="peak" value="peak">
+                <label for="peak">Peak-season</label><br>
+                <input type="radio" id="middle" name="middle" value="middle">
+                <label for="middle">Middle-season</label><br/>
+                <input type="radio" id="low" name="low" value="low">
+                <label for="low">Low-Season</label>
+            </fieldset>
+            <label>
+                Enter Pick Up<input type="text" name="pick_up" placeholder="Enter pick_up">
             </label>
             <label>
-                Enter Season<input type="text" name="season" placeholder="Enter season">
+                Enter Pick Up Extra<input type="text" name="pick_up_extra" placeholder="Enter pick_up_extra">
             </label>
-            <label>
-                Enter Pick Up<input type="text" name="pick_up" placeholder="Enter pick up">
-            </label>
-            <label>
-                Enter Pick Up Extra<input type="text" name="pick_up_extra" placeholder="Enter pick up extra">
-            </label>
-
-
 
             <div class="createCustomer">
                 <button type="submit" value="Create new Rental">Add Rental</button>

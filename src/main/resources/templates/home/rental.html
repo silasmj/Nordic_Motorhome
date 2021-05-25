@@ -7,7 +7,7 @@
 </head>
 <body>
 <ul>
-    <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold"><a href="/" style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold">Welcome to Nordic Motorhome</a></p>
+    <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold"><a href="/">Welcome to Nordic Motorhome</a></p>
     <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
     <li><a class="dtopbtn" href="/customer">Customers</a></li>
     <li><a class="dtopbtn" href="/rental">Rentals</a></li>
@@ -15,6 +15,7 @@
 </ul>
 <h1 class="customerHeader">Create Rental</h1>
 <p class="customerParagraph">Here is the list of Rentals</p>
+
 <div style = "position:relative; left:47.5%; top:2%;">
     <a href="/createRental" class="styled-table">
         <button>Create new rental</button>
@@ -22,14 +23,14 @@
 </div>
 <br>
 
-
 <table class="styled-table">
     <thead>
     <tr>
         <th>Rental id</th>
         <th>Customer id</th>
         <th>Motorhome id</th>
-        <th>Rental Start</th>
+        <th>Rental Start date</th>
+        <th>Start time</th>
         <th>Bike Rack</th>
         <th>Bed Linen</th>
         <th>Chairs</th>
@@ -48,7 +49,8 @@
         <td th:text="${rental.rental_id}"></td>
         <td th:text="${rental.customer_id}"></td>
         <td th:text="${rental.motorhome_id}"></td>
-        <td th:text="${rental.rental_start}"></td>
+        <td th:text="${rental.rental_start_date}"></td>
+        <td th:text="${rental.start_time}"></td>
         <td th:text="${rental.bike_rack}"></td>
         <td th:text="${rental.bed_linen}"></td>
         <td th:text="${rental.chairs}"></td>
@@ -65,11 +67,16 @@
             <a th:href="@{'/updateRental/'+${rental.rental_id}}">
                 <button>Edit Rental</button>
             </a>
+            <a th:href="@{'/return/'+${rental.rental_id}}">
+                <button>Return</button>
+            </a>
+
         </td>
     </tr>
     </tbody>
 </table>
 </body>
 </html>
+
 
 

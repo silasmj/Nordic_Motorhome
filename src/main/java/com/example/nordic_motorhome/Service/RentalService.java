@@ -1,6 +1,7 @@
 package com.example.nordic_motorhome.Service;
 
 import com.example.nordic_motorhome.Model.Customer;
+import com.example.nordic_motorhome.Model.Motorhome;
 import com.example.nordic_motorhome.Model.Rental;
 import com.example.nordic_motorhome.Repository.RentalRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,8 @@ public class RentalService {
     }
     public Rental findRentalById(int rental_id) {
         return rentalRepo.findRentalbyId(rental_id);
+    }
+    public Rental updateRental(int rental_id, Rental r){
+        return rentalRepo.updateRental(rental_id, r);
     }
 }
