@@ -18,3 +18,34 @@ li a, .dropbtn {
 li a:hover, .dropdown:hover .dropbtn {
     background-color: #F58F29;
 }
+
+.wrapperCreateReturn{
+    bottom: 20%;
+    right: 30%;
+    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f3f3f3;
+    text-align: center;
+    border: 2px solid #F58F29;
+    width: 700px;
+    height: auto;
+
+}
+
+.wrapperCreateReturn label{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.wrapperCreateReturn input {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+}
