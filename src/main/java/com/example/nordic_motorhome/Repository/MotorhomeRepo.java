@@ -20,6 +20,49 @@ public class MotorhomeRepo {
         RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
         return template.query(sql, rowMapper);
     }
+    public List<Motorhome> showUrbanPlus() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'A';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+
+    public List<Motorhome> showCompactPlus() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'B';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+    public List<Motorhome> showFamilyPlus() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'C';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+    public List<Motorhome> showPremiumPlus() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'D';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+    public List<Motorhome> showUrbanLuxury() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'E';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+    public List<Motorhome> showCompactLuxury() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'F';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+
+    public List<Motorhome> showFamilyLuxury() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'G';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+    public List<Motorhome> showPremiumLuxury() {
+        String sql = "SELECT * FROM motorhome where motorhome.type = 'H';";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        return template.query(sql, rowMapper);
+    }
+
 
     public Motorhome createMotorhome(Motorhome m){
         String sql = "INSERT INTO motorhome (motorhome_id, brand, model, type) VALUES (?, ?, ?, ?)";

@@ -215,15 +215,5 @@ li a:hover, .dropdown:hover .dropbtn {
     margin-left: 10px;
 }
 
-.column {
-    float: left;
-    width: 25%;
-    padding: 5px;
-}
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 

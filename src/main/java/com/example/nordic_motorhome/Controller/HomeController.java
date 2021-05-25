@@ -52,7 +52,7 @@ public class HomeController {
     @PostMapping("/createRental")
     public String createRental(@ModelAttribute Rental rental){
         rentalService.createRental(rental);
-        return "redirect:/rental";
+        return "home/succesRental";
     }
 
 
@@ -71,7 +71,7 @@ public class HomeController {
     @PostMapping("/createMotorhome")
     public String createMotorhome(@ModelAttribute Motorhome motorhome){
         motorhomeService.createMotorhome(motorhome);
-        return "redirect:/motorhome";
+        return "home/succesMotorhome";
 
     }
     @GetMapping("/deleteMotorhome/{motorhome_id}")
@@ -91,7 +91,7 @@ public class HomeController {
     @PostMapping("/updateMotorhome")
     public String updateMotorhome(@ModelAttribute Motorhome motorhome){
         motorhomeService.updateMotorhome(motorhome.getMotorhome_id(), motorhome);
-        return "redirect:/motorhome";
+        return "home/editedMotorhome";
     }
     @GetMapping("/customer")
     public String customer(Model model){
@@ -118,7 +118,7 @@ public class HomeController {
     @PostMapping("/createCustomer")
     public String createCustomer(@ModelAttribute Customer customer){
         customerService.createCustomer(customer);
-        return "redirect:/customer";
+        return "home/succesCustomer";
     }
 
     @GetMapping("/updateCustomer/{customer_id}")
@@ -130,6 +130,6 @@ public class HomeController {
     @PostMapping("/updateCustomer")
     public String updateCustomer(@ModelAttribute Customer customer){
         customerService.updateCustomer(customer.getCustomer_id(), customer);
-        return "redirect:/customer";
+        return "home/editedCustomer";
     }
 }

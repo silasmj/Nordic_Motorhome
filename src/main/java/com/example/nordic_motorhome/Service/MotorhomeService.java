@@ -28,5 +28,29 @@ public class MotorhomeService {
     public Motorhome findMotorhomeById(int motorhome_id){
         return motorhomeRepo.findMotorhomeById(motorhome_id);
     }
+    public List<Motorhome> showUrbanPlus() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showCompactPlus() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showFamilyPlus() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showPremiumPlus() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showUrbanLuxury() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showCompactLuxury() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showFamilyLuxury() {
+        return motorhomeRepo.showMotorhome();
+    }
+    public List<Motorhome> showPremiumLuxury() {
+        return motorhomeRepo.showMotorhome();
+    }
 
 }
