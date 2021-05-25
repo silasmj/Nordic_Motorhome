@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Returns</title>
+    <link rel="stylesheet" type="text/css" href="returnCSS.css">
+</head>
+<body>
+<ul>
+  <p style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold"><a href="/" style="color: wheat; text-align: left; float: left; padding-left: 10px; font-weight: bold">Welcome to Nordic Motorhome</a></p>
+  <li><a class="dtopbtn" href="/motorhome">Motorhomes</a></li>
+  <li><a class="dtopbtn" href="/customer">Customers</a></li>
+  <li><a class="dtopbtn" href="/rental">Rentals</a></li>
+</ul>
+
+<h1 class="returnHeader">Return details</h1>
+<p class="returnParagraph">Here is the chosen return</p>
+<br>
+
+<div class="wrapperReturn">
+  <form action="/return" method="post">
+    <div class="returnParagraph">
+      <label>
+        Rental ID <input type="text" name="rental_id" th:value="${rental.rental_id}">
+      </label>
+      <label>
+        Rental End (yyyy-mm-dd)<input type="text" name="rental_end_date" th:value="${return.rental_end_date}">
+      </label>
+      <label>
+        Rental End Time(hh:mm:ss)<input type="text" name="end_time" th:value="${return.end_time}">
+      </label>
+      <label>
+        Drop off extras<input type="text" name="drop_off_extras" th:value="${return.drop_off_extras}">
+      </label>
+      <label>
+        KM at End<input type="text" name="kmEnd" th:value="${return.kmEnd}">
+      </label>
+      <label>
+        Repair fee<input type="text" name="repair_fee" th:value="${return.repair_fee}">
+      </label>
+      <label>
+        Fuel level<input type="text" name="fuel_level" th:value="${return.fuel_level}">
+      </label>
+      <label>
+        Full Price<input type="text" name="address" th:value="${return.full_price}">
+      </label>
+      <div class="returnButton">
+        <button type="submit" value="Save return">Save return</button>
+      </div>
+      <br>
+    </div>
+  </form>
+</div>
+</body>
+</html>
