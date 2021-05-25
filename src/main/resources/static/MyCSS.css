@@ -184,7 +184,6 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .wrapperCreateCustomer{
-    position: absolute;
     bottom: 20%;
     right: 30%;
     top: 15%;
@@ -194,7 +193,7 @@ li a:hover, .dropdown:hover .dropbtn {
     text-align: center;
     border: 2px solid #F58F29;
     width: 700px;
-    height: 350px;
+    height: auto;
 
 }
 
