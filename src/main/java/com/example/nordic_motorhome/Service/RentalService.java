@@ -20,4 +20,10 @@ public class RentalService {
     public Rental createRental(Rental r){
         return rentalRepo.createRental(r);
     }
+    public Boolean deleteRental(int rental_id){
+        return rentalRepo.deleteRental(rental_id);
+    }
+    public Rental findRentalById(int rental_id) {
+        return rentalRepo.findRentalbyId(rental_id);
+    }
 }

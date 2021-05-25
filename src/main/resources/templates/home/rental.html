@@ -15,7 +15,7 @@
 </ul>
 <h1 class="customerHeader">Create Rental</h1>
 <p class="customerParagraph">Here is the list of Rentals</p>
-<div style = "position:relative; left:45.5%; top:2%;">
+<div style = "position:relative; left:47.5%; top:2%;">
     <a href="/createRental" class="styled-table">
         <button>Create new rental</button>
     </a>
@@ -58,7 +58,7 @@
         <td th:text="${rental.season}"></td>
         <td th:text="${rental.pick_up}"></td>
         <td th:text="${rental.pick_up_extra}"></td>
-
+        <td>
             <a th:href="@{'/deleteRental/'+${rental.rental_id}}">
                 <button>Delete Rental</button>
             </a>

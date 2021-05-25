@@ -54,7 +54,20 @@ public class HomeController {
         rentalService.createRental(rental);
         return "home/succesRental";
     }
-
+    @GetMapping("/deleteRental/{rental_id}")
+    public String deleteRental(@PathVariable("rental_id") int rental_id){
+        boolean deletedRental = rentalService.deleteRental(rental_id);
+        if (deletedRental){
+            return "redirect:/rental";
+        }else{
+            return "redirect:/rental";
+        }
+    }
+    @GetMapping("/updateRental/{rental_id}")
+    public String updateRental(@PathVariable("rental_id") int rental_id, Model model){
+        model.addAttribute("rental", rentalService.findRentalById(rental_id));
+        return "home/updateRental";
+    }
 
     @GetMapping("/motorhome")
     public String motorhome (Model model){
